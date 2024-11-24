@@ -1,0 +1,14 @@
+In 1st testcase:
+Ninja is currently standing on building 1 with height 1m
+If he can jump upto 2m.He would be able to perform following jumps
+He would jump 1 m upwards from building 1 to building 2
+1m upwards from building 2 to building 3
+1m upwards from building 3 to building 4
+2m from building 4 to building 5
+He is jumping a maximum of 2 steps.It can be shown that 2 is the minimum amount of jumping power required to jump through all buildings
+
+In 2nd testcases:
+Ninja is currently standing on building 1 with height 50
+He would jump 0m from building 1 to building 2
+He would jump 0m from building 2 to building 3
+So minimum jumping power of 0m would be required for ninja to get to last building

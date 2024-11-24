@@ -1,0 +1,20 @@
+One fine day,Rishabh is preparing for campus interview now.But to qualify to apply for job he needs a minimum CGPA of 7.5.
+He prepared his application to apply for FAANG companies and wrote his final CGPA in a piece of paper.But one day before the interview he lost the paper.
+Fortunately he has SGPA of all 8 semester.Help him calculate CGPA as he is busy preparing for the interview.
+
+Cumulative CGPA is calculated by taking average of all the SGPA
+
+It is also known that SGPA scored is an integer ranging from 0 to 10 both inclusive
+
+INPUT:
+Each testcase contains 8 values SGPA obtained in 8 semesters
+
+OUTPUT:
+OUTPUT the cumulative CGPA
+
+
+
+
+
+
+//8 semester ke sgpa

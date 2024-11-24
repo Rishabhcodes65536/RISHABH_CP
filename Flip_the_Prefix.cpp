@@ -1,0 +1,117 @@
+#include<bits/stdc++.h>
+//#include<ext/pb_ds/assoc_container.hpp>
+using namespace std;
+//using namespace __gnu_pbds;
+//typedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update> indexed_set;
+#define endl              '\n'
+#define ff                first
+#define ss                second
+#define pb                emplace_back
+#define ppb               pop_back
+#define int               long long
+#define float             long double
+#define lb                lower_bound
+#define ub                upper_bound
+#define sz(x)             (int)(x).size()
+#define ppc               __builtin_popcountll
+#define all(x)            (x).begin(), (x).end()
+#define rall(x)           (x).rbegin(), (x).rend()
+#define uniq(v)           (v).erase(unique(all(v)),(v).end())
+#define rep(i,a,b)        for(int i=a;i<b;i++)
+#define per(i,a,b)        for(int i=(a);i>=(b);i--)
+#define invec(a,n)        vector<int>a(n); rep(i,0,n) cin>>a[i]
+#define inarr(a,n)        int a[n]; rep(i,0,n) cin>>a[i]
+#define in(k,a) for(auto k : a)
+#define disp(a) in(k,a){ cout<<k<<' ';} cout<<endl
+const int M=1e9+7;
+#define test int t; cin>>t; while(t--)
+#define SUMARR(a)   accumulate(a , a+n ,0LL)
+#define SUM(v)      accumulate(all(v),0LL)
+#define MAXIARR(a,n)  *max_element(a , a+n)
+#define MINIARR(a,n)  *min_element(a , a+n)
+#define MAX(v)      *max_element((v).begin(),(v).end())
+#define MINI(v)     *min_element((v).begin(),(v).end()) 
+#define PI           atan(1)*4
+#define INF          INT64_MAX
+#define fbo(x)       find_by_order(x)
+#define ook(x)       order_of_key(x)
+#define out(x)       cout<<x<<endl;
+bool sortbysec(const pair<int,int> &a,const pair<int,int> &b){return (a.second < b.second);}
+#define f(i,n) for(int i = 0; i < n; i++)
+/////खुदी को कर बुलंद इतना के हर तकदीर से पहले खुदा बन्दे से खुद पूछे के बता तेरी रज़ा क्या है;/////
+int countDivisors(int n)
+{
+int cnt = 0;
+for (int i = 1; i <= sqrt(n); i++) {
+ if (n % i == 0) {
+ if (n / i == i)
+  cnt++;
+else // Otherwise count both
+cnt = cnt + 2;
+}
+ }
+return cnt;
+}
+void dosomething(){
+int n,k;
+cin>>n>>k;
+string s;
+cin>>s;
+int q=1;
+int res=0;
+vector <char> vec;
+per(i,k-1,0){
+vec.pb(s[i]);
+if((s[i]-'0')^q){
+    res++;
+    q^=1;
+}
+}
+int i=0;
+// cout<<res<<endl;
+//1101
+if(k==1){
+    rep(i,0,n){
+        if(s[i]=='1'){
+            cout<<"0"<<endl;
+            return;
+        }
+       
+    }
+    cout<<"1"<<endl;
+        return;
+    
+}
+while(k+i<n){
+    int temp=res;
+    int g=vec.front()-'0';
+    int h=vec.back()-'0';
+    vec.pb(s[k+i]);
+    if(vec.back()=='0' && h==1){
+        res++;
+    }
+    // cout<<"hi"<<res<<endl;
+    vec.erase(vec.begin());
+    if(!(vec.front()-'0') && g==1){
+        res--;
+    }
+    // disp(vec);
+    // cout<<res<<"bye"<<endl;
+    res=min(temp,res);
+    i++;
+}
+cout<<res<<endl;
+}
+signed main(){
+ios_base::sync_with_stdio(false);
+cin.tie(0);cout.tie(0);
+//cout << fixed << setprecision(9);
+
+int t=1;
+cin>>t;
+while(t--){
+dosomething();
+//Case #<<t<<'='<< ;
+}
+    return 0;
+}

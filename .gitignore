@@ -1,0 +1,6 @@
+*/.cph
+*/.vscode
+*/.build
+.cph
+.vscode
+build
